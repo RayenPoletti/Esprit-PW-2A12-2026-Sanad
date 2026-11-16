@@ -1,0 +1,20 @@
+/* Sanad · charte graphique appliquée au template Medilab (surcharge des variables de main.css) */
+:root {
+  --accent-color: #2E7D6B;        /* vert sauge */
+  --heading-color: #17324D;       /* bleu nuit */
+  --default-color: #3E4A5C;
+  --nav-hover-color: #2E7D6B;
+  --nav-dropdown-hover-color: #2E7D6B;
+}
+.light-background { --background-color: #F7F5F0; --surface-color: #FFFDF9; }
+.header .logo img { max-height: 40px; margin-right: 8px; }
+.sanad-module { background: #FCE3D8; color: #A3472A; font-weight: 600; margin-top: 8px; }
+.sanad-chip { background: #E3F0EC; color: #1F574B; font-weight: 600; }
+.sanad-btn { background: var(--accent-color); color: #fff; border: 0; }
+.sanad-btn:hover, .sanad-btn:focus { background: #1F574B; color: #fff; }
+.sanad-card { background: var(--surface-color, #fff); border: 1px solid #E1DED5; border-radius: 12px; padding: 24px; }
+.sanad-avatar { width: 96px; height: 96px; border-radius: 50%; background: #E3F0EC; color: #1F574B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 28px; flex: none; }
+.sanad-avatar.sm { width: 44px; height: 44px; font-size: 18px; }
+.sanad-comment { border-left: 3px solid #E3F0EC; padding: 4px 12px; margin-top: 8px; }
+.doctors .team-member .member-info { padding-left: 24px; }
+:focus-visible { outline: 3px solid #F28C6B; outline-offset: 2px; }

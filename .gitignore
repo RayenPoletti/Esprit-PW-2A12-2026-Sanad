@@ -1,0 +1,16 @@
+# Système
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.vscode/
+.idea/
+
+# Dépendances et builds
+node_modules/
+vendor/
+!frontoffice/assets/vendor/
+
+# Configuration locale (mots de passe)
+backoffice/config/database.local.php
+.env

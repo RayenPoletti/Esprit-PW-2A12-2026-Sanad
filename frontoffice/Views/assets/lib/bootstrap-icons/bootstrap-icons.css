@@ -1,0 +1,38 @@
+/*
+ * Remplaçant léger de Bootstrap Icons pour le projet Sanad.
+ * Les classes « bi bi-... » des vues Medilab sont affichées avec les polices Font Awesome Free
+ * (lib/fontawesome-free). Si vous copiez le vrai dossier bootstrap-icons de Medilab ici,
+ * il remplace simplement ce fichier : rien d'autre à changer.
+ */
+.bi::before { display: inline-block; font-family: "Font Awesome 6 Free"; font-weight: 900; font-style: normal;
+  font-variant: normal; line-height: 1; text-rendering: auto; -webkit-font-smoothing: antialiased; vertical-align: -.125em; }
+.bi { font-style: normal; }
+.bi-b::before { font-family: "Font Awesome 6 Brands"; font-weight: 400; }
+.bi-activity::before { content: "\f83e"; }
+.bi-arrow-up-short::before { content: "\f062"; }
+.bi-bag-heart::before { content: "\f290"; }
+.bi-chat-heart::before { content: "\f086"; }
+.bi-check2::before { content: "\f00c"; }
+.bi-chevron-right::before { content: "\f054"; }
+.bi-clipboard2-check::before { content: "\f46c"; }
+.bi-egg-fried::before { content: "\f7fb"; }
+.bi-envelope::before { content: "\f0e0"; }
+.bi-facebook::before { content: "\f09a"; font-family: "Font Awesome 6 Brands"; font-weight: 400; }
+.bi-geo-alt::before { content: "\f3c5"; }
+.bi-gift::before { content: "\f06b"; }
+.bi-heart-pulse::before { content: "\f21e"; }
+.bi-instagram::before { content: "\f16d"; font-family: "Font Awesome 6 Brands"; font-weight: 400; }
+.bi-linkedin::before { content: "\f08c"; font-family: "Font Awesome 6 Brands"; font-weight: 400; }
+.bi-list::before { content: "\f0c9"; }
+.bi-moon-stars::before { content: "\f186"; }
+.bi-patch-check::before { content: "\f058"; }
+.bi-person-arms-up::before { content: "\f183"; }
+.bi-person-circle::before { content: "\f2bd"; }
+.bi-person-vcard::before { content: "\f2c2"; }
+.bi-person-walking::before { content: "\f554"; }
+.bi-search-heart::before { content: "\f002"; }
+.bi-telephone::before { content: "\f095"; }
+.bi-twitter-x::before { content: "\e61b"; font-family: "Font Awesome 6 Brands"; font-weight: 400; }
+.bi-universal-access::before { content: "\f29a"; }
+.bi-wind::before { content: "\f72e"; }
+.bi-x::before { content: "\f00d"; }

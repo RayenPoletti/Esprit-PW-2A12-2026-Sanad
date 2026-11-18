@@ -14,30 +14,39 @@ gh label create "in-progress" --repo "$REPO" --color F28C6B --force >/dev/null
 
 gh issue create --repo "$REPO" --title "Diagramme de cas d’utilisation général et détaillés" --body "Responsable : Toute l’équipe" --label general --label done
 gh issue create --repo "$REPO" --title "Diagramme de classes" --body "Responsable : Toute l’équipe" --label general --label done
-gh issue create --repo "$REPO" --title "Création du dépôt GitHub (nom, description, topics, tuteurs invités)" --body "Responsable : Toute l’équipe" --label general
 gh issue create --repo "$REPO" --title "README structuré selon le guide Esprit" --body "Responsable : Toute l’équipe" --label general --label done
-gh issue create --repo "$REPO" --title "Intégration du template Back Office TailAdmin en MVC (partials, layout, Controller, routes)" --body "Responsable : Toute l’équipe" --label general --label done
-gh issue create --repo "$REPO" --title "Intégration du template Front Office Medilab en MVC (includes, navbar dynamique)" --body "Responsable : Toute l’équipe" --label general --label in-progress
+gh issue create --repo "$REPO" --title "Intégration du template Back Office TailAdmin en MVC (Controllers, Models, Views/includes, layout)" --body "Responsable : Toute l’équipe" --label general --label done
 gh issue create --repo "$REPO" --title "Schéma de la base de données MySQL (database/sanad.sql)" --body "Responsable : Toute l’équipe" --label general --label done
 gh issue create --repo "$REPO" --title "Module commun · pages Front : inscription, connexion, passeport" --body "Responsable : Toute l’équipe" --label module-commun --label done
 gh issue create --repo "$REPO" --title "Module commun · pages Back : utilisateurs, ajout, passeports" --body "Responsable : Toute l’équipe" --label module-commun --label done
-gh issue create --repo "$REPO" --title "Module commun · CRUD Utilisateur et Passeport (PDO)" --body "Responsable : Toute l’équipe" --label module-commun
-gh issue create --repo "$REPO" --title "Module commun · authentification et sessions" --body "Responsable : Toute l’équipe" --label module-commun
 gh issue create --repo "$REPO" --title "Module 1 · pages Front : formulaire d’audit, mes audits" --body "Responsable : Rayen Poletti" --label module-1 --label done
 gh issue create --repo "$REPO" --title "Module 1 · pages Back : lieux, ajout lieu, audits, ajout audit" --body "Responsable : Rayen Poletti" --label module-1 --label done
-gh issue create --repo "$REPO" --title "Module 1 · CRUD Lieu et Audit + calcul du score (jointure)" --body "Responsable : Rayen Poletti" --label module-1
 gh issue create --repo "$REPO" --title "Module 2 · pages Front : professionnels, prise de rendez-vous" --body "Responsable : Aziz Kouki" --label module-2 --label done
 gh issue create --repo "$REPO" --title "Module 2 · pages Back : professionnels, rendez-vous, formulaires" --body "Responsable : Aziz Kouki" --label module-2 --label done
-gh issue create --repo "$REPO" --title "Module 2 · CRUD Professionnel et RendezVous (jointure)" --body "Responsable : Aziz Kouki" --label module-2
 gh issue create --repo "$REPO" --title "Module 3 · pages Front : programmes" --body "Responsable : Rayen Marzougi" --label module-3 --label done
 gh issue create --repo "$REPO" --title "Module 3 · pages Back : programmes, séances, formulaires" --body "Responsable : Rayen Marzougi" --label module-3 --label done
-gh issue create --repo "$REPO" --title "Module 3 · CRUD Programme et Séance (jointure)" --body "Responsable : Rayen Marzougi" --label module-3
 gh issue create --repo "$REPO" --title "Module 4 · pages Front : communauté (publier, commenter, signaler)" --body "Responsable : Houssem Hafsi" --label module-4 --label done
 gh issue create --repo "$REPO" --title "Module 4 · pages Back : publications, commentaires, modération" --body "Responsable : Houssem Hafsi" --label module-4 --label done
-gh issue create --repo "$REPO" --title "Module 4 · CRUD Publication et Commentaire (jointure)" --body "Responsable : Houssem Hafsi" --label module-4
 gh issue create --repo "$REPO" --title "Module 5 · pages Front : boutique solidaire" --body "Responsable : Karim Bousetta" --label module-5 --label done
 gh issue create --repo "$REPO" --title "Module 5 · pages Back : produits, ajout produit, commandes" --body "Responsable : Karim Bousetta" --label module-5 --label done
-gh issue create --repo "$REPO" --title "Module 5 · CRUD Produit et Commande + LigneCommande (jointure)" --body "Responsable : Karim Bousetta" --label module-5
-gh issue create --repo "$REPO" --title "Contrôle de saisie des formulaires (PHP et JavaScript)" --body "Responsable : Toute l’équipe" --label general
+gh issue create --repo "$REPO" --title "Intégration du template Front Office Medilab en MVC (includes, navbar dynamique)" --body "Responsable : Toute l’équipe" --label general --label done
+gh issue create --repo "$REPO" --title "Création du dépôt GitHub (nom, description, topics, tuteurs invités)" --body "Responsable : Toute l’équipe" --label general --label done
+gh issue create --repo "$REPO" --title "Module commun · socle sécurité : Database singleton, bootstrap (session, expiration, en-têtes)" --body "Responsable : Rayen Poletti" --label module-commun --label done
+gh issue create --repo "$REPO" --title "Module commun · authentification : inscription, connexion, déconnexion, CSRF" --body "Responsable : Aziz Kouki" --label module-commun --label done
+gh issue create --repo "$REPO" --title "Module commun · rôles et contrôle d’accès (requireAuth, requireRole, pages 403)" --body "Responsable : Rayen Marzougi" --label module-commun --label done
+gh issue create --repo "$REPO" --title "Module commun · CRUD utilisateurs Back Office (recherche, filtres, pagination, blocage)" --body "Responsable : Houssem Hafsi" --label module-commun --label done
+gh issue create --repo "$REPO" --title "Module commun · Mon compte + Mon passeport (Front Office)" --body "Responsable : Karim Bousetta" --label module-commun --label done
+gh issue create --repo "$REPO" --title "Contrôle de saisie : validation.js + Validator.php (module commun)" --body "Responsable : Toute l’équipe" --label general --label done
+gh issue create --repo "$REPO" --title "Structure MVC du workshop (Controllers, Models, Views/assets, Views/includes, config.php) dans les deux espaces" --body "Responsable : Toute l’équipe" --label general --label done
+gh issue create --repo "$REPO" --title "Module 5 · CRUD Produit (Back Office) + boutique du Front Office lue en base" --body "Responsable : Karim Bousetta" --label module-5 --label done
+gh issue create --repo "$REPO" --title "Module 2 · Fiche médicale et antécédents (patient, médecin, consentement au partage)" --body "Responsable : Aziz Kouki" --label module-2 --label done
+gh issue create --repo "$REPO" --title "Module 1 · CRUD Lieu et Audit, validation des audits, points et score des lieux (FO + BO)" --body "Responsable : Rayen Poletti" --label module-1 --label done
+gh issue create --repo "$REPO" --title "Module 2 · CRUD Professionnel et RendezVous, recherche selon le passeport, prise de rendez-vous (FO + BO)" --body "Responsable : Aziz Kouki" --label module-2 --label done
+gh issue create --repo "$REPO" --title "Module 3 · CRUD Programme et Séance, inscription et progression (FO + BO)" --body "Responsable : Rayen Marzougi" --label module-3 --label done
+gh issue create --repo "$REPO" --title "Module 4 · Publications et commentaires, signalement et modération (FO + BO)" --body "Responsable : Houssem Hafsi" --label module-4 --label done
+gh issue create --repo "$REPO" --title "Module 5 · Panier, commandes en dinars ou en points, suivi des commandes (FO + BO)" --body "Responsable : Karim Bousetta" --label module-5 --label done
+gh issue create --repo "$REPO" --title "Validation PHP + JavaScript de tous les formulaires" --body "Responsable : Toute l’équipe" --label general --label done
+gh issue create --repo "$REPO" --title "Tableau de bord du Back Office branché sur la base" --body "Responsable : Toute l’équipe" --label general --label done
+gh issue create --repo "$REPO" --title "Ajout des fichiers du template Medilab (assets/vendor)" --body "Responsable : Toute l’équipe" --label general --label in-progress
 gh issue create --repo "$REPO" --title "Fonctionnalités IA : orientation et recommandations" --body "Responsable : Toute l’équipe" --label general
 echo "Issues créées. Ajoutez-les au tableau Projects et fermez celles qui sont terminées."

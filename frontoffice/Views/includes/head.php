@@ -8,7 +8,7 @@ $pageTitle = $pageTitle ?? 'Sanad';
   <meta name="description" content="Sanad : la santé accessible, vérifiée par ceux qui la vivent.">
 
   <!-- Favicons -->
-  <link href="assets/img/sanad-icon.svg" rel="icon" type="image/svg+xml">
+  <link href="Views/assets/img/sanad-icon.svg" rel="icon" type="image/svg+xml">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -16,14 +16,14 @@ $pageTitle = $pageTitle ?? 'Sanad';
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files (Medilab) -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="Views/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Views/assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="Views/assets/lib/aos/aos.css" rel="stylesheet">
+  <link href="Views/assets/lib/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="Views/assets/lib/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="Views/assets/lib/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File (Medilab) -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="Views/assets/css/main.css" rel="stylesheet">
   <!-- Charte graphique Sanad (surcharge les couleurs de Medilab) -->
-  <link href="assets/css/sanad.css" rel="stylesheet">
+  <link href="Views/assets/css/sanad.css" rel="stylesheet">

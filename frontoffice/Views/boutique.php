@@ -1,4 +1,8 @@
 <?php
+/**
+ * Boutique solidaire · Module 5 · Karim Bousetta
+ * Variables : $produits (Produit[]) lus dans la base par BoutiqueController — ajoutés depuis le Back Office ; $csrfToken, $nbPanier, $flash
+ */
 $pageTitle   = 'Boutique solidaire';
 $currentPage = 'boutique';
 ?>
@@ -37,61 +41,38 @@ $currentPage = 'boutique';
       <span class="badge rounded-pill sanad-module">Module 5 · Karim Bousetta · Produit ↔ Commande</span>
     </div>
       <div class="container">
+        <?= bandeauFlash($flash) ?>
+        <?php if ($nbPanier > 0): ?>
+          <div class="alert alert-info d-flex justify-content-between align-items-center"><span><?= (int) $nbPanier ?> article(s) dans votre panier.</span><a class="btn btn-sm sanad-btn" href="index.php?page=panier">Voir mon panier</a></div>
+        <?php endif; ?>
         <div class="row gy-4">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="sanad-card h-100 d-flex flex-column">
-              <span class="badge rounded-pill sanad-chip align-self-start">Reconditionné</span>
-              <h3 class="h5 mt-3">Fauteuil roulant pliant</h3>
-              <p class="fs-4 fw-bold mb-0">350 DT</p>
-              <p class="text-muted small">ou 3 500 points</p>
-              <button type="button" class="btn sanad-btn mt-auto">Ajouter au panier</button>
+          <?php if (empty($produits)): ?>
+            <p class="text-center">Aucun produit disponible pour le moment.</p>
+          <?php endif; ?>
+          <?php foreach ($produits as $p): ?>
+            <div class="col-lg-4 col-md-6">
+              <div class="sanad-card h-100 d-flex flex-column">
+                <span class="badge rounded-pill <?= $p->estDon() ? 'text-bg-warning' : 'sanad-chip' ?> align-self-start"><?= e($p->getEtat()) ?></span>
+                <h3 class="h5 mt-3"><?= e($p->getNom()) ?></h3>
+                <p class="small"><?= e($p->getDescription()) ?></p>
+                <?php if ($p->estDon()): ?>
+                  <p class="fs-4 fw-bold mb-0">Gratuit</p>
+                  <p class="text-muted small">Réservé aux membres</p>
+                <?php else: ?>
+                  <p class="fs-4 fw-bold mb-0"><?= e(rtrim(rtrim(number_format((float) $p->getPrix(), 2, ',', ' '), '0'), ',')) ?> DT</p>
+                  <p class="text-muted small">ou <?= e(number_format($p->getPrixPoints(), 0, ',', ' ')) ?> points</p>
+                <?php endif; ?>
+                <?php if ((int) $p->getStock() > 0): ?>
+                  <form class="mt-auto" action="index.php?page=panier-ajouter" method="post">
+                    <?= champCsrf($csrfToken) ?><input type="hidden" name="id" value="<?= (int) $p->getId() ?>">
+                    <button type="submit" class="btn sanad-btn w-100"><?= $p->estDon() ? 'Réserver ce don' : 'Ajouter au panier' ?></button>
+                  </form>
+                <?php else: ?>
+                  <button type="button" class="btn btn-outline-secondary mt-auto" disabled>Épuisé</button>
+                <?php endif; ?>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
-            <div class="sanad-card h-100 d-flex flex-column">
-              <span class="badge rounded-pill sanad-chip align-self-start">Reconditionné</span>
-              <h3 class="h5 mt-3">Déambulateur 4 roues</h3>
-              <p class="fs-4 fw-bold mb-0">120 DT</p>
-              <p class="text-muted small">ou 1 200 points</p>
-              <button type="button" class="btn sanad-btn mt-auto">Ajouter au panier</button>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="sanad-card h-100 d-flex flex-column">
-              <span class="badge rounded-pill text-bg-warning align-self-start">Don</span>
-              <h3 class="h5 mt-3">Siège de douche pliant</h3>
-              <p class="fs-4 fw-bold mb-0">Gratuit</p>
-              <p class="text-muted small">Réservé aux membres</p>
-              <button type="button" class="btn sanad-btn mt-auto">Réserver ce don</button>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="sanad-card h-100 d-flex flex-column">
-              <span class="badge rounded-pill sanad-chip align-self-start">Reconditionné</span>
-              <h3 class="h5 mt-3">Loupe électronique</h3>
-              <p class="fs-4 fw-bold mb-0">90 DT</p>
-              <p class="text-muted small">ou 900 points</p>
-              <button type="button" class="btn sanad-btn mt-auto">Ajouter au panier</button>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="sanad-card h-100 d-flex flex-column">
-              <span class="badge rounded-pill text-bg-warning align-self-start">Don</span>
-              <h3 class="h5 mt-3">Lit médicalisé</h3>
-              <p class="fs-4 fw-bold mb-0">Gratuit</p>
-              <p class="text-muted small">Réservé aux membres</p>
-              <button type="button" class="btn sanad-btn mt-auto">Réserver ce don</button>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
-            <div class="sanad-card h-100 d-flex flex-column">
-              <span class="badge rounded-pill sanad-chip align-self-start">Reconditionné</span>
-              <h3 class="h5 mt-3">Coussin anti-escarres</h3>
-              <p class="fs-4 fw-bold mb-0">45 DT</p>
-              <p class="text-muted small">ou 450 points</p>
-              <button type="button" class="btn sanad-btn mt-auto">Ajouter au panier</button>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </section>

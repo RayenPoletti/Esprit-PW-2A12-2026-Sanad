@@ -1,0 +1,36 @@
+/* Sanad · charte graphique appliquée au template Medilab (surcharge des variables de main.css) */
+:root {
+  --accent-color: #2E7D6B;        /* vert sauge */
+  --heading-color: #17324D;       /* bleu nuit */
+  --default-color: #3E4A5C;
+  --nav-hover-color: #2E7D6B;
+  --nav-dropdown-hover-color: #2E7D6B;
+}
+.light-background { --background-color: #F7F5F0; --surface-color: #FFFDF9; }
+.header .logo img { max-height: 40px; margin-right: 8px; }
+.sanad-module { background: #FCE3D8; color: #A3472A; font-weight: 600; margin-top: 8px; }
+.sanad-chip { background: #E3F0EC; color: #1F574B; font-weight: 600; }
+.sanad-btn { background: var(--accent-color); color: #fff; border: 0; }
+.sanad-btn:hover, .sanad-btn:focus { background: #1F574B; color: #fff; }
+.sanad-card { background: var(--surface-color, #fff); border: 1px solid #E1DED5; border-radius: 12px; padding: 24px; }
+.sanad-avatar { width: 96px; height: 96px; border-radius: 50%; background: #E3F0EC; color: #1F574B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 28px; flex: none; }
+.sanad-avatar.sm { width: 44px; height: 44px; font-size: 18px; }
+.sanad-comment { border-left: 3px solid #E3F0EC; padding: 4px 12px; margin-top: 8px; }
+.doctors .team-member .member-info { padding-left: 24px; }
+:focus-visible { outline: 3px solid #F28C6B; outline-offset: 2px; }
+
+/* ---- Formulaires : messages d'erreur (validation.js + PHP) ---- */
+.sanad-erreur { min-height: 1.25rem; margin-top: 4px; font-size: .875rem; color: #B42318; }
+.form-control.is-invalid, .form-select.is-invalid { border-color: #B42318; }
+.sanad-auth { max-width: 560px; }
+.sanad-auth .form-label { font-weight: 600; }
+.sanad-auth button[type=submit], .sanad-form button[type=submit] { background: var(--accent-color); color: #fff; border: 0; padding: 10px 35px; border-radius: 50px; }
+.sanad-auth button[type=submit]:hover, .sanad-form button[type=submit]:hover { background: #1F574B; }
+.sanad-danger-zone { border-color: #F3C4B5; }
+
+/* ---- Fiche médicale : historique des consultations ---- */
+.sanad-timeline { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 2px solid #E3F0EC; }
+.sanad-timeline li { position: relative; padding: 0 0 22px 8px; }
+.sanad-timeline li::before { content: ""; position: absolute; left: -31px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid var(--accent-color); }
+.sanad-timeline li:last-child { padding-bottom: 0; }
+.sanad-timeline dt { font-weight: 600; color: var(--heading-color); }

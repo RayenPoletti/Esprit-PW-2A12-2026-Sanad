@@ -12,5 +12,5 @@ vendor/
 !frontoffice/assets/vendor/
 
 # Configuration locale (mots de passe)
-backoffice/config/database.local.php
+commun/config/database.local.php
 .env

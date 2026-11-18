@@ -1,4 +1,7 @@
 <?php
+/**
+ * Connexion · Module commun. Variables : $erreurs, $email, $csrfToken, $flash
+ */
 $pageTitle   = 'Connexion';
 $currentPage = 'connexion';
 ?>
@@ -30,13 +33,27 @@ $currentPage = 'connexion';
       </div>
     </div><!-- End Page Title -->
 
-    <section id="appointment" class="appointment section">
-      <div class="container" style="max-width: 560px" data-aos="fade-up">
-        <form action="index.php?page=connexion" method="post" class="php-email-form">
-          <div class="form-group mt-3"><label class="form-label" for="email">E-mail</label><input type="email" class="form-control" id="email" name="email" required></div><div class="form-group mt-3"><label class="form-label" for="motDePasse">Mot de passe</label><input type="password" class="form-control" id="motDePasse" name="motDePasse" required></div>
-          <div class="text-center mt-4"><button type="submit">Se connecter</button></div>
-          <p class="text-center mt-3 mb-0">Pas encore de compte ? <a href="index.php?page=inscription">S’inscrire</a></p>
-        </form>
+    <section class="section">
+      <div class="container sanad-auth">
+        <div class="sanad-card">
+          <?= bandeauFlash($flash) ?>
+          <?php if (isset($erreurs['_form'])): ?><?= bandeauFlash(['type' => 'danger', 'message' => $erreurs['_form']]) ?><?php endif; ?>
+          <form action="index.php?page=connexion" method="post" data-validate novalidate>
+            <input type="hidden" name="csrf_token" value="<?= e($csrfToken) ?>">
+            <div class="form-group mt-3">
+            <label class="form-label" for="email">E-mail *</label>
+            <input type="email" class="form-control<?= invalide($erreurs, 'email') ?>" id="email" name="email" value="<?= e($email) ?>" autocomplete="username" data-label="L’e-mail" data-required data-rule="email">
+            <?= zoneErreur($erreurs, 'email') ?>
+          </div>
+            <div class="form-group mt-3">
+            <label class="form-label" for="motDePasse">Mot de passe *</label>
+            <input type="password" class="form-control<?= invalide($erreurs, 'motDePasse') ?>" id="motDePasse" name="motDePasse" autocomplete="current-password" data-label="Le mot de passe" data-required>
+            <?= zoneErreur($erreurs, 'motDePasse') ?>
+          </div>
+            <div class="text-center mt-4"><button type="submit">Se connecter</button></div>
+            <p class="text-center mt-3 mb-0">Pas encore de compte ? <a href="index.php?page=inscription">S’inscrire</a></p>
+          </form>
+        </div>
       </div>
     </section>
 

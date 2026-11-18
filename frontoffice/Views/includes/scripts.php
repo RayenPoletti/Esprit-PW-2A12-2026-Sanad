@@ -1,10 +1,12 @@
 <!-- Vendor JS Files (Medilab) -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="Views/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="Views/assets/lib/aos/aos.js"></script>
+<script src="Views/assets/lib/glightbox/js/glightbox.min.js"></script>
+<script src="Views/assets/lib/purecounter/purecounter_vanilla.js"></script>
+<script src="Views/assets/lib/swiper/swiper-bundle.min.js"></script>
 
 <!-- Main JS File (Medilab) -->
-<script src="assets/js/main.js"></script>
+<script src="Views/assets/js/main.js"></script>
+
+<!-- Contrôle des saisies côté client (doublé par la validation PHP). Remplace lib/php-email-form/validate.js de Medilab. -->
+<script src="Views/assets/js/validation.js"></script>

@@ -1,0 +1,4 @@
+# Les vues PHP sont affichées par les contrôleurs, pas appelées directement. Les fichiers de assets/ restent accessibles.
+<FilesMatch "\.php$">
+  Require all denied
+</FilesMatch>

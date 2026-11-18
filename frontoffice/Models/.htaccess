@@ -1,0 +1,2 @@
+# Les classes sont incluses par index.php ; elles ne doivent jamais être appelées depuis le navigateur.
+Require all denied

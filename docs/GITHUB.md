@@ -7,15 +7,15 @@ Ce guide applique la directive « Standardisation des dépôts GitHub – Projet
 Format obligatoire : `Esprit-[PI]-[Classe]-[AU]-[NomDuProjet]`
 
 ```
-Esprit-PW-2AXX-2026-Sanad
+Esprit-PW-2A12-2026-Sanad
 ```
 
-➡️ Remplacez `2AXX` par votre classe (par exemple `2A12`), ici et dans le `README.md`.
+(Classe 2A12 : le nom est déjà appliqué dans tout le dépôt.)
 
 ## 2. Créer le dépôt
 
 1. Sur GitHub : **New repository**.
-2. Nom : `Esprit-PW-2AXX-2026-Sanad` · visibilité **Public**.
+2. Nom : `Esprit-PW-2A12-2026-Sanad` · visibilité **Public**.
 3. Ne cochez pas « Add a README » (il est déjà dans le dossier).
 4. Dans un terminal, depuis le dossier du projet :
 
@@ -24,7 +24,7 @@ git init
 git add .
 git commit -m "Initialisation : structure MVC, templates Front et Back Office, diagramme de classes"
 git branch -M main
-git remote add origin https://github.com/<votre-compte>/Esprit-PW-2AXX-2026-Sanad.git
+git remote add origin https://github.com/RayenPoletti/Esprit-PW-2A12-2026-Sanad.git
 git push -u origin main
 ```
 
@@ -75,7 +75,7 @@ Chaque personne doit accepter l’invitation reçue par e-mail.
 Avec le [GitHub CLI](https://cli.github.com/) connecté à votre compte (`gh auth login`) :
 
 ```bash
-bash docs/creer-issues.sh <votre-compte>/Esprit-PW-2AXX-2026-Sanad
+bash docs/creer-issues.sh RayenPoletti/Esprit-PW-2A12-2026-Sanad
 ```
 
 Le script crée une *issue* par tâche, avec une étiquette par module. Ajoutez-les ensuite au tableau (**Add item → #numéro**).

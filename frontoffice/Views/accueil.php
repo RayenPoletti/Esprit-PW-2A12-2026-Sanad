@@ -19,7 +19,7 @@ $currentPage = 'accueil';
 
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <img src="Views/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
       <div class="container position-relative">
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
           <h2>Chaque lieu de soin, vérifié sur place</h2>
